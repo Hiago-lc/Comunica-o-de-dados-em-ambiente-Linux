@@ -33,15 +33,15 @@ int main (int argc, char *argv[]) {
 
     status = pthread_create(&thread_id1,NULL,threadFunction,(void*)("1"));
     if(status != 0) {
-        printf ("*** Erro na criaÁ„o da thread do bot„o ***\n");
+        printf ("*** Erro na cria√ß√£o da thread do bot√£o ***\n");
         exit(EXIT_FAILURE);
     } else {
-        printf ("Thread do bot„o criada com sucesso.\n\n");
+        printf ("Thread do bot√£o criada com sucesso.\n\n");
     }
 
     status = pthread_create(&thread_id2,NULL,threadFunction2,(void*)("2"));
     if(status != 0) {
-        printf ("*** Erro na criaÁ„o da thread do potenciomentro ***\n");
+        printf ("*** Erro na cria√ß√£o da thread do potenciomentro ***\n");
         exit(EXIT_FAILURE);
     } else {
         printf ("Thread do potenciomentro criada com sucesso.\n\n");
@@ -50,15 +50,15 @@ int main (int argc, char *argv[]) {
 
     status = pthread_join (thread_id1, &thread_ret);
     if(status != 0) {
-        printf ("*** Erro na finalizaÁ„o da thread do bot„o ***\n");
+        printf ("*** Erro na finaliza√ß√£o da thread do bot√£o ***\n");
         exit(EXIT_FAILURE);
     } else {
-        printf("Thread do bot„o finalizada com sucesso.\n\n");
+        printf("Thread do bot√£o finalizada com sucesso.\n\n");
     }
 
     status = pthread_join (thread_id2, &thread_ret);
     if(status != 0) {
-        printf ("*** Erro na finalizaÁ„o da thread do potenciomentro ***\n");
+        printf ("*** Erro na finaliza√ß√£o da thread do potenciomentro ***\n");
         exit(EXIT_FAILURE);
     } else {
         printf("Thread do potenciomentro finalizada com sucesso.\n\n");
